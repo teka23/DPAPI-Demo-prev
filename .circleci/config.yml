@@ -6,6 +6,8 @@ jobs:
       image: windows-server-2019-vs2019:stable
     resource_class: windows.medium
     steps:
+      - checkout
+
       - run:
           name: Build
           command: dotnet build .\DPAPI-Demo.sln --configuration Release -r win10-x64
