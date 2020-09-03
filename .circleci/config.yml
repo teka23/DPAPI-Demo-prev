@@ -1,0 +1,15 @@
+version: 2
+
+jobs:
+  build:
+    machine:
+      image: windows-server-2019-vs2019:stable
+
+  steps:
+    - run:
+      name: Build
+      command: dotnet build .\DPAPI-Demo.sln --configuration Release -r win10-x64
+
+    - run:
+      name: Run
+      Command: DPAPI-Demo\bin\Release\DPAPI-Demo.exe
