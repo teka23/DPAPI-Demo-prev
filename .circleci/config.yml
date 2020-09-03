@@ -7,9 +7,9 @@ jobs:
 
   steps:
     - run:
-      name: Build
-      command: dotnet build .\DPAPI-Demo.sln --configuration Release -r win10-x64
+        name: Build
+        command: dotnet build .\DPAPI-Demo.sln --configuration Release -r win10-x64
 
     - run:
-      name: Run
-      Command: DPAPI-Demo\bin\Release\DPAPI-Demo.exe
+        name: Run
+        Command: DPAPI-Demo\bin\Release\DPAPI-Demo.exe
