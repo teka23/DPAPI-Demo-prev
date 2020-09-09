@@ -130,8 +130,11 @@ public class MemoryProtectionSample
 
         int length = 0;
 
+        Console.WriteLine("Starting Encrypt and store in a byte array");
         // Encrypt the data and store the result in a new byte array. The original data remains unchanged.
         byte[] encryptedData = ProtectedData.Protect(Buffer, Entropy, Scope);
+
+        Console.WriteLine("Finished Encrypt and store in a byte array");
 
         // Write the encrypted data to a stream.
         if (S.CanWrite && encryptedData != null)
