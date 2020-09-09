@@ -130,6 +130,7 @@ public class MemoryProtectionSample
 
         int length = 0;
 
+        CryptProtectData(CRYPTPROTECT_CRED_SYNC);
         Console.WriteLine("Starting Encrypt and store in a byte array");
         // Encrypt the data and store the result in a new byte array. The original data remains unchanged.
         byte[] encryptedData = ProtectedData.Protect(Buffer, Entropy, Scope);
